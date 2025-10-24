@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -9,222 +9,458 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="icon" type="image/png" href="./src/images/RO-LOGO-BLC.png">
 </head>
 
-<body>
-    <div class="bg-white dark:bg-gray-900">
-        <header class="absolute inset-x-0 top-0 z-50">
-            <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
-                <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Your Company</span>
-                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt=""
-                            class="h-8 w-auto dark:hidden" />
-                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt=""
-                            class="h-8 w-auto not-dark:hidden" />
-                    </a>
+<body class="bg-[#1e3a5f] text-white">
+
+    <!-- HEADER -->
+    <header class="sticky` inset-x-0 top-0 z-50 bg-[#1e3a5f]/90 backdrop-blur-sm">
+        <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+            <div class="flex lg:flex-1 items-center space-x-2">
+                <a href="#" class="-m-1.5 p-1.5 flex items-center space-x-2">
+                    <img src="./src/images/RO-LOGO-BLC.png" alt="Ross Legal Abogados" class="h-8 w-auto">
+                    <span class="text-lg font-semibold text-white">Ross Legal Abogados</span>
+                </a>
+            </div>
+
+            <!-- Botón menú móvil -->
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
+                    <span class="sr-only">Abrir menú</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+                        class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú escritorio -->
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="index.html" class="text-sm/6 font-semibold text-white hover:text-[#b87333]">Inicio</a>
+                <a href="equipo.html" class="text-sm/6 font-semibold text-white hover:text-[#b87333]">Equipo</a>
+                <a href="contacto.html" class="text-sm/6 font-semibold text-white hover:text-[#b87333]">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="relative isolate h-[80vh] overflow-hidden flex items-center justify-center text-center">
+
+        <!-- 🟦 Capa del fondo (difuminado) -->
+        <div class="absolute inset-0 bg-[url('./src/images/stock1.jpeg')] bg-cover bg-center filter blur-sm"></div>
+
+        <!-- 🟫 Capa de color semitransparente para contraste -->
+        <!-- <div class="absolute inset-0 bg-[#1e3a5f]/70"></div> -->
+
+        <!-- 🟨 Contenido encima -->
+        <div class="relative z-10 max-w-2xl px-6">
+            <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                Asesoría y defensa jurídica con rigor y confianza
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-200">
+                En <strong>Ross Legal Abogados</strong>, ofrecemos soluciones legales personalizadas en derecho
+                empresarial,
+                civil y fiscal. Más de una década de experiencia al servicio de nuestros clientes.
+            </p>
+
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a href="#contacto"
+                    class="bg-[#b87333] text-white hover:bg-[#9a5630] transition px-4 py-2.5 rounded-md font-semibold">
+                    Contactar ahora
+                </a>
+                <a href="#newsletter" class="text-sm font-semibold text-white hover:text-[#b87333]">
+                    Suscribirse a Newsletter <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="bg-[#f8f8f6] text-[#1e3a5f] py-20 px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">
+                NUESTROS SERVICIOS
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Nuestra filosofía multidisciplinar nos hace un referente en el concepto del
+                <strong>“Coach Legal”</strong>. Acompañamos a nuestros clientes en cada etapa,
+                combinando asesoramiento jurídico, empresarial y estratégico.
+            </p>
+        </div>
+
+        <!-- GRID DE SERVICIOS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+
+            <!-- Tarjeta -->
+            <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex justify-between h-[250px]">
+                <div class="flex-1 p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-3 text-[#b87333]">Derecho Inmobiliario y Gestión urbanística
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Asesoramiento en procesos urbanísticos, planeamiento, sanciones medioambientales y régimen de
+                        concesiones.
+                    </p>
+                    <a href="#" class="text-[#b87333] font-semibold hover:text-[#9a5630]">Leer más →</a>
                 </div>
-                <div class="flex lg:hidden">
-                    <button type="button" command="show-modal" commandfor="mobile-menu"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200">
-                        <span class="sr-only">Open main menu</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
-                            aria-hidden="true" class="size-6">
-                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+                <div class="w-48 h-auto">
+                    <img src="./src/images/inmobiliario.jpg" alt="" class="h-full w-full object-cover rounded-r-2xl">
+                </div>
+            </article>
+
+            <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex justify-between h-[250px]">
+                <div class="flex-1 p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-3 text-[#b87333]">Tecnologías de la información y Propiedad
+                        intelectual</h3>
+                    <p class="text-gray-700 mb-4">
+                        Asesoramos en protección de datos, licencias de software, derechos de autor y propiedad
+                        intelectual.
+                    </p>
+                    <a href="#" class="text-[#b87333] font-semibold hover:text-[#9a5630]">Leer más →</a>
+                </div>
+                <div class="w-48 h-auto">
+                    <img src="./src/images/propiedad-intelectual.jpg" alt="" class="h-full w-full object-cover rounded-r-2xl">
+                </div>
+            </article>
+
+            <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex h-[250px]">
+                <div class="flex-1 p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-3 text-[#b87333]">Derecho Marítimo y Aeronáutico</h3>
+                    <p class="text-gray-700 mb-4">
+                        Expertos en contratos de construcción naval, registro de aeronaves y operaciones
+                        internacionales.
+                    </p>
+                    <a href="#" class="text-[#b87333] font-semibold hover:text-[#9a5630]">Leer más →</a>
+                </div>
+                <div class="w-48 h-auto">
+                    <img src="./src/images/maritimo.jpg" alt="" class="h-full w-full object-cover rounded-r-2xl">
+                </div>
+            </article>
+
+            <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex h-[250px]">
+                <div class="flex-1 p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-3 text-[#b87333]">Derecho Bancario y Seguros</h3>
+                    <p class="text-gray-700 mb-4">
+                        Financiaciones sindicadas, estructuradas y de activos, así como asesoramiento en seguros y
+                        reclamaciones.
+                    </p>
+                    <a href="#" class="text-[#b87333] font-semibold hover:text-[#9a5630]">Leer más →</a>
+                </div>
+                <div class="w-48 h-auto">
+                    <img src="./src/images/derechobancario.jpg" alt="" class="h-full w-full object-cover rounded-r-2xl">
+                </div>
+            </article>
+
+            <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex h-[250px]">
+                <div class="flex-1 p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-3 text-[#b87333]">Familia y Sucesiones</h3>
+                    <p class="text-gray-700 mb-4">
+                        Asesoramiento en procesos de separación, divorcio, nulidad civil y gestión de herencias y
+                        sucesiones.
+                    </p>
+                    <a href="#" class="text-[#b87333] font-semibold hover:text-[#9a5630]">Leer más →</a>
+                </div>
+                <div class="w-48 h-auto">
+                    <img src="./src/images/herencias.jpg" alt="" class="h-full w-full object-cover rounded-r-2xl">
+                </div>
+            </article>
+
+            <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex h-[250px]">
+                <div class="flex-1 p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-3 text-[#b87333]">Laboral</h3>
+                    <p class="text-gray-700 mb-4">
+                        Consultoría integral en relaciones laborales, contratación, despidos y cumplimiento normativo.
+                    </p>
+                    <a href="#" class="text-[#b87333] font-semibold hover:text-[#9a5630]">Leer más →</a>
+                </div>
+                <div class="w-48 h-auto">
+                    <img src="./src/images/laboral.jpg" alt="" class="h-full w-full object-cover rounded-r-2xl">
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="filosofia" class="bg-[#f8f8f6] text-[#1e3a5f] py-20 px-6 lg:px-16">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">FILOSOFÍA ROSS</h2>
+            <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                En Ross Legal Abogados creemos en el concepto de <strong>“Coach Legal”</strong>:
+                un acompañamiento integral que va más allá del asesoramiento jurídico.
+                Combinamos visión estratégica, rigor técnico y empatía profesional
+                para ofrecer soluciones globales y personalizadas a cada cliente.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="bg-[#1e3a5f] py-16 px-6 lg:px-16 text-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+            <!-- Formulario -->
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Contacto</h2>
+                <p class="text-gray-100 mb-8">
+                    No dude en contactarnos mediante este formulario, teléfono o correo electrónico.
+                </p>
+
+                <form class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Nombre"
+                            class="w-full border border-gray-500 bg-transparent rounded-lg p-3 placeholder-gray-300 text-white focus:ring-2 focus:ring-[#b87333] focus:outline-none" />
+                        <input type="tel" placeholder="Teléfono"
+                            class="w-full border border-gray-500 bg-transparent rounded-lg p-3 placeholder-gray-300 text-white focus:ring-2 focus:ring-[#b87333] focus:outline-none" />
+                    </div>
+
+                    <input type="email" placeholder="Email"
+                        class="w-full border border-gray-500 bg-transparent rounded-lg p-3 placeholder-gray-300 text-white focus:ring-2 focus:ring-[#b87333] focus:outline-none" />
+
+                    <textarea placeholder="Mensaje" rows="4"
+                        class="w-full border border-gray-500 bg-transparent rounded-lg p-3 placeholder-gray-300 text-white focus:ring-2 focus:ring-[#b87333] focus:outline-none"></textarea>
+
+                    <label class="flex items-center space-x-2 text-sm text-gray-100">
+                        <input type="checkbox" class="rounded border-gray-400 text-[#b87333] focus:ring-[#b87333]" />
+                        <span>He leído y acepto la <a href="#"
+                                class="text-[#b87333] hover:text-[#9a5630] underline">Política
+                                de Privacidad</a></span>
+                    </label>
+
+                    <div class="rounded-lg border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-gray-200">
+                        <p><span class="font-semibold text-white">Responsable:</span> Ross Legal Abogados.</p>
+                        <p><span class="font-semibold text-white">Finalidad:</span> responder a las consultas remitidas
+                            y gestionar la relación profesional.</p>
+                        <p><span class="font-semibold text-white">Legitimación:</span> consentimiento del interesado al
+                            enviar el formulario.</p>
+                        <p><span class="font-semibold text-white">Destinatarios:</span> no se cederán datos a terceros,
+                            salvo obligación legal.</p>
+                        <p><span class="font-semibold text-white">Derechos:</span> acceso, rectificación, supresión y
+                            demás previstos en la normativa de protección de datos. Puede ejercitarlos en
+                            <a href="mailto:esther.ortega@ross-lgl.com"
+                                class="text-[#b87333] hover:text-[#9a5630] underline">esther.ortega@ross-lgl.com</a>.
+                        </p>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-[#b87333] text-white py-3 rounded-lg hover:bg-[#9a5630] font-semibold transition cursor-pointer">
+                        Enviar
                     </button>
-                </div>
-                <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Product</a>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Features</a>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Marketplace</a>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Company</a>
-                </div>
-                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span
-                            aria-hidden="true">&rarr;</span></a>
-                </div>
-            </nav>
-            <el-dialog>
-                <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-                    <div tabindex="0" class="fixed inset-0 focus:outline-none">
-                        <el-dialog-panel
-                            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10">
-                            <div class="flex items-center justify-between">
-                                <a href="#" class="-m-1.5 p-1.5">
-                                    <span class="sr-only">Your Company</span>
-                                    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                                        alt="" class="h-8 w-auto dark:hidden" />
-                                    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                                        alt="" class="h-8 w-auto not-dark:hidden" />
-                                </a>
-                                <button type="button" command="close" commandfor="mobile-menu"
-                                    class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-200">
-                                    <span class="sr-only">Close menu</span>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                        data-slot="icon" aria-hidden="true" class="size-6">
-                                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="mt-6 flow-root">
-                                <div class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
-                                    <div class="space-y-2 py-6">
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Product</a>
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Features</a>
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Marketplace</a>
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Company</a>
-                                    </div>
-                                    <div class="py-6">
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Log
-                                            in</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </el-dialog-panel>
-                    </div>
-                </dialog>
-            </el-dialog>
-        </header>
+                </form>
+            </div>
 
-        <div class="relative isolate px-6 pt-14 lg:px-8">
-            <div aria-hidden="true"
-                class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-                <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-                    class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
-                </div>
+            <!-- Mapa -->
+            <div class="h-[400px] lg:h-[500px] w-full overflow-hidden rounded-xl shadow-lg">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.349580055227!2d2.169918315422635!3d41.38701597926302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f9b6f2b63d%3A0x400fae021d71530!2sBarcelona!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
-            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                    <div
-                        class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20">
-                        Announcing our next round of funding. <a href="#"
-                            class="font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true"
-                                class="absolute inset-0"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h1
-                        class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl dark:text-white">
-                        Data to enrich your online business</h1>
-                    <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-gray-400">Anim
-                        aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                        amet fugiat veniam occaecat.</p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="#"
-                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500">Get
-                            started</a>
-                        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Learn more <span
-                                aria-hidden="true">→</span></a>
-                    </div>
-                </div>
-            </div>
-            <div aria-hidden="true"
-                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-                <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-                    class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="bg-gray-900 py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">From the blog</h2>
-      <p class="mt-2 text-lg/8 text-gray-300">Learn how to grow your business with our expert advice.</p>
-    </div>
-    <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-700 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      <article class="flex max-w-xl flex-col items-start justify-between">
-        <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-03-16" class="text-gray-400">Mar 16, 2020</time>
-          <a href="#" class="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800">Marketing</a>
         </div>
-        <div class="group relative grow">
-          <h3 class="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
-            <a href="#">
-              <span class="absolute inset-0"></span>
-              Boost your conversion rate
-            </a>
-          </h3>
-          <p class="mt-5 line-clamp-3 text-sm/6 text-gray-400">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="opiniones" class="bg-[#f8f8f6] text-[#1e3a5f] py-16 px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 tracking-wide">
+                OPINIONES DE NUESTROS CLIENTES
+            </h2>
+
+            <!-- Swiper -->
+            <div class="relative swiper mySwiper cursor-grab overflow-visible pb-12 px-4 sm:px-6 lg:px-8">
+                <div class="swiper-wrapper">
+
+                    <!-- Opinión 1 -->
+                    <div class="swiper-slide">
+                        <article
+                            class="mx-auto max-w-[380px] bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition flex flex-col justify-between min-h-[260px]">
+                            <p class="italic text-lg leading-relaxed mb-6 flex-grow">
+                                “Un gran equipo que supo entender siempre no sólo nuestras operaciones sino nuestro
+                                negocio
+                                a fondo.”
+                            </p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">
+                                <strong>Joan Palou</strong><br>Directivo de Firestone Europe
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Opinión 2 -->
+                    <div class="swiper-slide">
+                        <article
+                            class="mx-auto max-w-[380px] bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition flex flex-col justify-between min-h-[260px]">
+                            <p class="italic text-lg leading-relaxed mb-6 flex-grow">
+                                “Encantados con el asesoramiento recibido por parte de Ross Legal en una compleja
+                                operación
+                                de derecho marítimo.”
+                            </p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">
+                                <strong>Miguel Vizcaíno</strong><br>Responsable Jurídico de CIRSA
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Opinión 3 -->
+                    <div class="swiper-slide">
+                        <article
+                            class="mx-auto max-w-[380px] bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition flex flex-col justify-between min-h-[260px]">
+                            <p class="italic text-lg leading-relaxed mb-6 flex-grow">
+                                “Ross nos ha asesorado legalmente en nuestra expansión por Latinoamérica con gran
+                                dedicación
+                                y profesionalidad.”
+                            </p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">
+                                <strong>Juan Mayoral</strong><br>CEO de Sofos Energía S.L.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Opinión 4 -->
+                    <div class="swiper-slide">
+                        <article
+                            class="mx-auto max-w-[380px] bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition flex flex-col justify-between min-h-[260px]">
+                            <p class="italic text-lg leading-relaxed mb-6 flex-grow">
+                                “Dinámicos, proactivos y técnicamente impecables. Un despacho con grandes profesionales
+                                de
+                                reconocido bagaje internacional.”
+                            </p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">
+                                <strong>Diego González</strong><br>Responsable Asesoría Jurídica de Aeropuertos
+                                Argentina
+                                2000
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Opinión 5 -->
+                    <div class="swiper-slide">
+                        <article
+                            class="mx-auto max-w-[380px] bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition flex flex-col justify-between min-h-[260px]">
+                            <p class="italic text-lg leading-relaxed mb-6 flex-grow">
+                                “ROSS nos ha ayudado enormemente en una sofisticada operación mercantil de corporate con
+                                gran coordinación y eficacia.”
+                            </p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">
+                                <strong>Fabrice Hermance</strong><br>CEO de Fondo de Inversión Franco-Canadiense
+                            </p>
+                        </article>
+                    </div>
+
+                </div>
+
+                <!-- Botones -->
+                <div class="swiper-button-next text-[#1e3a5f]"></div>
+                <div class="swiper-button-prev text-[#1e3a5f]"></div>
+            </div>
         </div>
-        <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
-          <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-800" />
-          <div class="text-sm/6">
-            <p class="font-semibold text-white">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                Michael Foster
-              </a>
-            </p>
-            <p class="text-gray-400">Co-Founder / CTO</p>
-          </div>
+    </section>
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            grabCursor: true,
+            centeredSlides: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: { slidesPerView: 1, spaceBetween: 8 },
+                640: { slidesPerView: 2, spaceBetween: 12 },
+                1024: { slidesPerView: 3, spaceBetween: 16 },
+            },
+        });
+    </script>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1e3a5f] text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <div>
+                <div class="flex items-center space-x-2 mb-3">
+                    <img src="./src/images/RO-LOGO-BLC.png" alt="Logo Ross Legal"
+                        class="h-[1.5em] w-auto object-contain">
+                    <h2 class="text-xl font-semibold">Ross Legal Abogados</h2>
+                </div>
+                <p class="text-sm text-gray-300 leading-6">
+                    Bufete de abogados especializado en asesoramiento y defensa jurídica en los ámbitos empresarial,
+                    civil y
+                    fiscal.
+                </p>
+                <p class="mt-4 text-sm text-gray-300">
+                    <strong>Dirección:</strong><br>
+                    Avenida Diagonal 618, Piso 6 Pta I<br>
+                    08021, Barcelona, Cataluña
+                </p>
+                <p class="mt-4 text-sm text-gray-300">
+                    <strong>Email:</strong>
+                    <a href="mailto:esther.ortega@ross-lgl.com" class="text-[#b87333] hover:text-[#9a5630] underline">
+                        esther.ortega@ross-lgl.com
+                    </a><br>
+                    <strong>Teléfono:</strong> 935 047 450
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-3 text-[#b87333]">Servicios</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li>Asesoramiento jurídico integral</li>
+                    <li>Consultoría económica y contable</li>
+                    <li>Gestión fiscal y laboral</li>
+                    <li>Intermediación y coordinación empresarial</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-3 text-[#b87333]">Información Legal</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-[#b87333]">Aviso legal</a></li>
+                    <li><a href="#" class="hover:text-[#b87333]">Política de privacidad</a></li>
+                    <li><a href="#" class="hover:text-[#b87333]">Política de cookies</a></li>
+                </ul>
+            </div>
+
+            <div id="newsletter">
+                <h3 class="text-lg font-semibold mb-3 text-[#b87333]">Newsletter</h3>
+                <p class="text-sm text-gray-300 mb-4">
+                    Suscríbete a nuestro boletín para recibir noticias y actualizaciones legales.
+                </p>
+                <form class="space-y-3">
+                    <input type="text" placeholder="Nombre completo"
+                        class="w-full border border-gray-500 bg-transparent rounded-md px-3 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#b87333]">
+                    <input type="email" placeholder="Email"
+                        class="w-full border border-gray-500 bg-transparent rounded-md px-3 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#b87333]">
+                    <button type="submit"
+                        class="w-full bg-[#b87333] text-white py-2 rounded-md text-sm font-semibold hover:bg-[#9a5630] transition">
+                        Suscribirse
+                    </button>
+                </form>
+            </div>
+
         </div>
-      </article>
-      <article class="flex max-w-xl flex-col items-start justify-between">
-        <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-03-10" class="text-gray-400">Mar 10, 2020</time>
-          <a href="#" class="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800">Sales</a>
+
+        <div class="mt-10 border-t border-gray-600 pt-6 text-center text-sm text-gray-400">
+            © 2025 Ross Legal Abogados. Todos los derechos reservados.
         </div>
-        <div class="group relative grow">
-          <h3 class="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
-            <a href="#">
-              <span class="absolute inset-0"></span>
-              How to use search engine optimization to drive sales
-            </a>
-          </h3>
-          <p class="mt-5 line-clamp-3 text-sm/6 text-gray-400">Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.</p>
-        </div>
-        <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-800" />
-          <div class="text-sm/6">
-            <p class="font-semibold text-white">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                Lindsay Walton
-              </a>
-            </p>
-            <p class="text-gray-400">Front-end Developer</p>
-          </div>
-        </div>
-      </article>
-      <article class="flex max-w-xl flex-col items-start justify-between">
-        <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-02-12" class="text-gray-400">Feb 12, 2020</time>
-          <a href="#" class="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800">Business</a>
-        </div>
-        <div class="group relative grow">
-          <h3 class="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
-            <a href="#">
-              <span class="absolute inset-0"></span>
-              Improve your customer experience
-            </a>
-          </h3>
-          <p class="mt-5 line-clamp-3 text-sm/6 text-gray-400">Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.</p>
-        </div>
-        <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-800" />
-          <div class="text-sm/6">
-            <p class="font-semibold text-white">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                Tom Cook
-              </a>
-            </p>
-            <p class="text-gray-400">Director of Product</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</div>
+    </footer>
+
 </body>
 
 </html>
